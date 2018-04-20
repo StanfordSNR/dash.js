@@ -523,6 +523,7 @@ function DashManifestModel(config) {
                         // exceeds @maxSegmentDuration
                         //representation.segmentDuration = Math.min(segmentInfo.duration / representation.timescale, adaptation.period.mpd.maxSegmentDuration);
                         voRepresentation.segmentDuration = segmentInfo.duration / voRepresentation.timescale;
+                        voRepresentation.origSegmentDuration = segmentInfo.duration;
                     }
                     if (segmentInfo.hasOwnProperty(DashConstants.MEDIA)) {
                         voRepresentation.media = segmentInfo.media;
